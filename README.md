@@ -51,7 +51,7 @@ if __name__ == "__main__":
 
 ## 📞 ارتباط با ما
 - گزارش باگ و درخواست ویژگی: [ایجاد Issue](https://github.com/balecore/balecore/issues)
-- پشتیبانی فنی: [contact@balecore.ir](mailto:contact@balecore.ir)
+- پشتیبانی فنی: [@farde](http://ble.ir/farde)
 - کانال رسمی: [@balecore](https://t.me/balecore)
 
 ---
