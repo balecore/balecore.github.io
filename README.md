@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png">
+    <title>Bale Core - کتابخانه ربات‌سازی پایتون برای پیام‌رسان بله</title>
+    
+    <!-- فونت فارسی آلmarai از گوگل فونت -->
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- آیکون‌های فونت Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ریست استایل پیشفرض */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Almarai', sans-serif;
+        }
+
+        /* گرادینت پس‌زمینه متحرک */
+        body {
+            background: linear-gradient(-45deg, #40e0d0, #1e90ff, #40e0d0, #1e90ff);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* انیمیشن گرادینت */
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* استایل کانتینر اصلی */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* هدر با انیمیشن ورود */
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            animation: slideDown 1s ease;
+        }
+
+        /* انیمیشن هدر */
+        @keyframes slideDown {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* استایل لوگو */
+        .logo {
+            width: 200px;
+            height: auto;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: rotate(-5deg) scale(1.05);
+        }
+
+        /* بخش مستندات */
+        .docs-section {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        /* اسلایدشو اعضای تیم */
+        .team-slide {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .team-member {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #40e0d0;
+        }
+
+        /* فوتر */
+        footer {
+            background: rgba(0, 0, 0, 0.25);
+            padding: 3rem 0;
+            margin-top: 5rem;
+            color: white;
+            backdrop-filter: blur(5px);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #40e0d0;
+        }
+
+        /* نسخه موبایل */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .team-slide {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- بخش هدر -->
+    <header class="container">
+        <img src="logo.png" alt="Bale Core Logo" class="logo">
+        <h1 style="margin: 1rem 0; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.2)">Bale Core</h1>
+        <p style="color: white; font-size: 1.2rem;">کتابخانه پیشرفته ربات‌سازی پایتون برای پیام‌رسان بله</p>
+        
+        <!-- دکمه گیتهاب -->
+        <a href="https://github.com/balecore" target="_blank" style="display: inline-block; margin-top: 2rem; padding: 0.8rem 2rem; background: rgba(255,255,255,0.9); border-radius: 30px; text-decoration: none; color: #1e90ff; transition: all 0.3s ease;">
+            <i class="fab fa-github"></i> مشاهده در گیتهاب
+        </a>
+    </header>
+
+    <!-- بخش اصلی -->
+    <main class="container">
+        <!-- بخش مستندات -->
+        <section class="docs-section">
+            <h2 style="margin-bottom: 1rem; color: #1e90ff">📚 مستندات فنی</h2>
+            <p style="line-height: 2; color: #444">مستندات کامل و راهنمای API به زودی منتشر خواهد شد...</p>
+            
+            <!-- پیشنمایش ویژگی‌ها -->
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap">
+                <div style="padding: 1rem; background: rgba(255,255,255,0.9); border-radius: 10px; width: 200px">
+                    <h3>🛠️ ویژگی‌های کلیدی</h3>
+                    <ul style="list-style: none; padding: 0; text-align: right">
+                        <li>✅ پشتیبانی از Webhook</li>
+                        <li>✅ سیستم پلاگین ماژولار</li>
+                        <li>✅ مدیریت پیشرفته رویدادها</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- اعضای تیم -->
+        <section class="team-slide">
+            <!-- عضو 1 -->
+            <article class="team-member">
+                <img src="https://avatars.githubusercontent.com/u/115934256?v=4" alt="عضو تیم" width="120">
+                <h3>Amirabolfazle</h3>
+                <p style="color: #1e90ff; margin: 0.5rem 0">توسعه دهنده و مدیریت خارجی</p>
+                <p style="color: #666; line-height: 1.6">توسعه‌دهنده فول استک با ۱۰ سال سابقه در حوزه وب، طراحی نرم افزار، سرور، شبکه و...</p>
+                <div style="margin-top: 1rem">
+                    <a href="https://github.com/amirabolfazle" style="color: #40e0d0; text-decoration: none"><i class="fab fa-githb"></i></a>
+                </div>
+            </article>
+
+            <!-- عضو 2 -->
+            <article class="team-member">
+                <img src="https://avatars.githubusercontent.com/u/181479218?v=4" alt="عضو تیم" width="120">
+                <h3>None</h3>
+                <p style="color: #1e90ff; margin: 0.5rem 0">مدیریت اصلی پروژه و توسعه دهنده اصلی</p>
+                <p style="color: #666; line-height: 1.6">اطلاعاتی وجود ندارد</p>
+                <div style="margin-top: 1rem">
+                    <a href="https://github.com/adminbots" style="color: #40e0d0; text-decoration: none"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="footer-content">
+            <!-- بخش ارتباطات -->
+            <div class="social-links">
+                <a href="#"><i class="fas fa-envelope"></i> ارتباط با ما</a>
+                <a href="https://github.com/balecore" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="http://t.me/balecore"><i class="fab fa-telegram"></i> کانال تلگرام</a>
+            </div>
+            
+            <!-- لوگو -->
+            <img src="logo.png" alt="Bale Core Logo" style="width: 80px; filter: brightness(0) invert(1)">
+            
+            <!-- کپی رایت -->
+            <div style="text-align: center">
+                <p>© تمامی حقوق برای Bale Core محفوظ است - ۱۴۰۴</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem">نسخه ۱.۰.۰-alpha</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
